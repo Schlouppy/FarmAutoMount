@@ -1,0 +1,9 @@
+## Interface: 110105
+## Title: Farm Auto Mount
+## Notes: Automatically remounts after gathering herbs, ore, or lumber.
+## Author: Schlouppy
+## Version: 1.0.0
+## SavedVariables: FarmAutoMountDB
+
+Locales.lua
+FarmAutoMount.lua
