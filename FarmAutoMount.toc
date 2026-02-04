@@ -4,6 +4,7 @@
 ## Author: Schlouppy
 ## Version: 1.0.0
 ## SavedVariables: FarmAutoMountDB
+## SavedVariablesPerCharacter: FarmAutoMountCharDB
 
 Locales.lua
 FarmAutoMount.lua

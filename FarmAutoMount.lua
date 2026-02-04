@@ -8,15 +8,36 @@
 local L = FarmAutoMount_L
 local isGathering = false
 
+-- Default settings
+local defaults = {
+    mountName = nil,
+    enabled = true,
+    delay = 0.5,
+}
+
 -- Create a frame to listen to game events
 local frame = CreateFrame("Frame")
+frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 frame:RegisterEvent("LOOT_CLOSED")
 
 -- Called every time a registered event happens
 frame:SetScript("OnEvent", function(self, event, ...)
 
-    if event == "UNIT_SPELLCAST_SUCCEEDED" then
+    if event == "ADDON_LOADED" then
+        local addonName = ...
+
+        -- Only run for our addon
+        if addonName ~= "FarmAutoMount" then return end
+
+        -- Create saved variables if they don't exist yet
+        FarmAutoMountDB = FarmAutoMountDB or {}
+        FarmAutoMountCharDB = FarmAutoMountCharDB or {}
+
+        -- No need to listen for this event anymore
+        frame:UnregisterEvent("ADDON_LOADED")
+
+    elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
 
         -- Get the event arguments: who casted and what spell
         local unit, _, spellID = ...
