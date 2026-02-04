@@ -1,4 +1,4 @@
-## Interface: 110105
+## Interface: 120000
 ## Title: Farm Auto Mount
 ## Notes: Automatically remounts after gathering herbs, ore, or lumber.
 ## Author: Schlouppy

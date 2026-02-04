@@ -60,12 +60,32 @@ frame:SetScript("OnEvent", function(self, event, ...)
         if not isGathering then return end
         isGathering = false
 
+        -- Check if addon is enabled
+        if FarmAutoMountDB.enabled == false then return end
+
         -- Skip druids (they use Travel Form)
         local _, class = UnitClass("player")
         if class == "DRUID" then return end
 
-        -- Wait a short delay then summon favorite mount
-        C_Timer.After(0.5, function()
+        -- Get delay (saved or default)
+        local delay = FarmAutoMountDB.delay or defaults.delay
+
+        -- Get mount name (character first, then account)
+        local mountName = FarmAutoMountCharDB.mountName or FarmAutoMountDB.mountName
+
+        C_Timer.After(delay, function()
+            if mountName then
+                -- Search for the mount by name in the journal
+                for i = 1, C_MountJournal.GetNumMounts() do
+                    local name, _, _, _, _, _, _, _, _, _, isCollected, mountID =
+                        C_MountJournal.GetMountInfoByID(C_MountJournal.GetDisplayedMountID(i))
+                    if isCollected and name == mountName then
+                        C_MountJournal.SummonByID(mountID)
+                        return
+                    end
+                end
+            end
+            -- Fallback: summon favorite mount
             C_MountJournal.SummonByID(0)
         end)
 
