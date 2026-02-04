@@ -7,6 +7,14 @@
 
 local L = FarmAutoMount_L
 local isGathering = false
+local debugMode = false
+
+-- Print only when debug mode is on
+local function dbg(msg)
+    if debugMode then
+        print("|cFFFFAA00[FAM Debug]|r " .. msg)
+    end
+end
 
 -- Default settings
 local defaults = {
@@ -36,6 +44,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 
         -- No need to listen for this event anymore
         frame:UnregisterEvent("ADDON_LOADED")
+        dbg("Addon loaded, saved variables ready")
 
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
 
@@ -51,12 +60,14 @@ frame:SetScript("OnEvent", function(self, event, ...)
         or spellID == 265837 then     -- Mining
 
             isGathering = true
+            dbg("Gathering spell detected: " .. spellID)
 
         end
 
     elseif event == "LOOT_CLOSED" then
 
         -- Only mount if we just gathered something
+        dbg("Loot closed, isGathering = " .. tostring(isGathering))
         if not isGathering then return end
 
         -- Check if addon is enabled
@@ -72,6 +83,8 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- Get mount name (character first, then account)
         local mountName = FarmAutoMountCharDB.mountName or FarmAutoMountDB.mountName
 
+        dbg("Mounting in " .. delay .. "s (mount: " .. (mountName or "favorite") .. ")")
+
         C_Timer.After(delay, function()
             if mountName then
                 -- Search for the mount by name in the journal
@@ -79,12 +92,15 @@ frame:SetScript("OnEvent", function(self, event, ...)
                     local name, _, _, _, _, _, _, _, _, _, isCollected =
                         C_MountJournal.GetMountInfoByID(mountID)
                     if isCollected and name == mountName then
+                        dbg("Summoning: " .. name)
                         C_MountJournal.SummonByID(mountID)
                         return
                     end
                 end
+                dbg("Mount not found: " .. mountName .. ", using favorite")
             end
             -- Fallback: summon favorite mount
+            dbg("Summoning: favorite mount")
             C_MountJournal.SummonByID(0)
         end)
 
@@ -139,6 +155,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
             print("|cFFFF0000[FAM]|r " .. L["Usage delay"])
         end
 
+    elseif command == "debug" then
+        debugMode = not debugMode
+        print("|cFF00FF00[FAM]|r Debug: " .. (debugMode and "ON" or "OFF"))
+
     elseif command == "help" then
         print("|cFF00FF00[FAM]|r " .. L["Commands"])
         print("  " .. L["Help mount"])
@@ -146,6 +166,7 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         print("  " .. L["Help enable"])
         print("  " .. L["Help disable"])
         print("  " .. L["Help delay"])
+        print("  /fam debug - Toggle debug mode")
 
     end
 
