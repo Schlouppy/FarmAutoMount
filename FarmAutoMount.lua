@@ -71,6 +71,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
         if not isGathering then return end
 
         -- Check if addon is enabled
+        dbg("enabled = " .. tostring(FarmAutoMountDB.enabled) .. ", class = " .. select(2, UnitClass("player")))
         if FarmAutoMountDB.enabled == false then return end
 
         -- Skip druids (they use Travel Form)
