@@ -72,3 +72,59 @@ frame:SetScript("OnEvent", function(self, event, ...)
     end
 
 end)
+
+-- Register /fam slash command
+SLASH_FARMAUTOMOUNT1 = "/fam"
+SlashCmdList["FARMAUTOMOUNT"] = function(msg)
+
+    -- Split the message into command and the rest
+    local command, arg = msg:match("^(%S+)%s*(.*)$")
+
+    -- If nothing typed, show help
+    if not command then
+        command = "help"
+    end
+
+    -- Make command lowercase so "/fam MOUNT" works too
+    command = command:lower()
+
+    if command == "mount" then
+
+        -- Check if it's an account-wide setting: /fam mount account <name>
+        local accountMount = arg:lower():match("^account%s+(.+)")
+        if accountMount then
+            FarmAutoMountDB.mountName = accountMount
+            print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. accountMount)
+        else
+            FarmAutoMountCharDB.mountName = arg
+            print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. arg)
+        end
+
+    elseif command == "enable" then
+        FarmAutoMountDB.enabled = true
+        print("|cFF00FF00[FAM]|r " .. L["Enabled"])
+
+    elseif command == "disable" then
+        FarmAutoMountDB.enabled = false
+        print("|cFF00FF00[FAM]|r " .. L["Disabled"])
+
+    elseif command == "delay" then
+        local seconds = tonumber(arg)
+        if seconds then
+            FarmAutoMountDB.delay = seconds
+            print("|cFF00FF00[FAM]|r " .. L["Delay set to"] .. " " .. seconds .. "s")
+        else
+            print("|cFFFF0000[FAM]|r " .. L["Usage delay"])
+        end
+
+    elseif command == "help" then
+        print("|cFF00FF00[FAM]|r " .. L["Commands"])
+        print("  " .. L["Help mount"])
+        print("  " .. L["Help mount account"])
+        print("  " .. L["Help enable"])
+        print("  " .. L["Help disable"])
+        print("  " .. L["Help delay"])
+
+    end
+
+end
