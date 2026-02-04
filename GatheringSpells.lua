@@ -13,35 +13,33 @@ FarmAutoMount_GatheringSpells = {
         1239682,
 
     -- Mining
-    
-        265837,     -- Classic / BFA
-        2575,       -- Burning Crusade
+        2575,       -- Generic
+
+        265837,     -- Classic
+        265839,     -- Burning Crusade
         265841,     -- Wrath of the Lich King
         265843,     -- cataclysm
-        310861,     -- Mists of Pandaria
-        265829,     -- Warlords of Draenor
-        393309,     -- Battle for Azeroth
+        265845,     -- Mists of Pandaria
+        265847,     -- Warlords of Draenor
         265849,     -- Legion
-        423340,     -- Shadowlands
-
-
-        ,     -- TheWarWithin
+        265851,     -- Battle for Azeroth
+        309835,     -- Shadowlands
+        366260,     -- Dragonflight
+        423341,     -- TheWarWithin
     
     -- Herbalism
-    
-        265819,     -- Classic / BFA
-        2366,       -- Burning Crusade
-        2366,       -- Wrath of the Lich King
-        265825,     -- cataclysm
-        310854,     -- Mists of Pandaria
-        265847,     -- Warlords of Draenor
-    
-        
+        2366,       -- Generic
 
-        393310,     -- Battle for Azeroth
-        
-        
-        
-        423341,     -- TheWarWithin
+        265819,     -- Classic
+        265821,     -- Burning Crusade
+        265823,     -- Wrath of the Lich King
+        265825,     -- cataclysm
+        265827,     -- Mists of Pandaria
+        265829,     -- Warlords of Draenor
+        265834,     -- Legion
+        309780,     -- Battle for Azeroth
+        309780,     -- Shadowlands
+        366252,     -- Dragonflight
+        441327,     -- TheWarWithin
 
 }
