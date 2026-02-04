@@ -144,19 +144,18 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
 
     if command == "mount" then
 
-        -- Check if it's an account-wide setting: /fam mount account <name>
-        local isAccount = arg:lower():match("^account%s+")
-        if isAccount then
-            local mountArg = arg:match("^%S+%s+(.+)$")
-            local cleanName = CleanMountName(mountArg)
-            FarmAutoMountDB.mountName = cleanName
-            print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. cleanName)
-        else
-            local cleanName = CleanMountName(arg)
-            FarmAutoMountCharDB.mountName = cleanName
-            print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. cleanName)
-        end
+        local cleanName = CleanMountName(arg)
+        FarmAutoMountCharDB.mountName = cleanName
+        print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. cleanName)
+    
 
+    -- Account-wide mount setting: /fam account <name>
+    elseif command == "account" then
+
+        local cleanName = CleanMountName(arg)
+        FarmAutoMountDB.mountName = cleanName
+        print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. cleanName)
+    
     elseif command == "enable" then
         FarmAutoMountDB.enabled = true
         print("|cFF00FF00[FAM]|r " .. L["Enabled"])
@@ -174,6 +173,15 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
             print("|cFFFF0000[FAM]|r " .. L["Usage delay"])
         end
 
+    elseif command == "reset" then
+        if arg:lower():match("^account") then
+            FarmAutoMountDB.mountName = nil
+            print("|cFF00FF00[FAM]|r " .. L["Account mount reset"])
+        else
+            FarmAutoMountCharDB.mountName = nil
+            print("|cFF00FF00[FAM]|r " .. L["Character mount reset"])
+        end
+
     elseif command == "debug" then
         debugMode = not debugMode
         print("|cFF00FF00[FAM]|r Debug: " .. (debugMode and "ON" or "OFF"))
@@ -185,6 +193,8 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         print("  " .. L["Help enable"])
         print("  " .. L["Help disable"])
         print("  " .. L["Help delay"])
+        print("  " .. L["Help reset"])
+        print("  " .. L["Help reset account"])
         print("  /fam debug - Toggle debug mode")
 
     end
