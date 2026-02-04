@@ -7,7 +7,7 @@
 
 local L = FarmAutoMount_L
 local isGathering = false
-local debugMode = false
+local debugMode = true
 
 -- Print only when debug mode is on
 local function dbg(msg)
