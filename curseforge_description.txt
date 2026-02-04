@@ -1,0 +1,30 @@
+Short description:
+Automatically remounts after gathering herbs, mining ore, or gathering lumber. Supports any mount including Druid Travel Form. Lightweight and simple - just install and forget.
+
+Full description:
+
+Farm Auto Mount automatically resummons your mount right after gathering any resource — herbs, ore, or lumber. No more fumbling with keybinds between each node.
+
+This addon was inspired by existing addons like AutoMountFix, but the code was written entirely from scratch as a learning project, with the help of AI (Claude).
+
+Features:
+- Automatically remounts after harvesting herbs, mining ore, or gathering lumber
+- Choose any mount from your collection via /fam mount <name>
+- Per-character and account-wide mount settings
+- Supports Shift+click mount links from the journal
+- Druids are automatically skipped (Travel Form)
+- Configurable delay between harvest and mount summon
+- Settings persist between sessions
+- 10 languages supported (EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW)
+
+Commands:
+- /fam mount <name> - Set mount for this character
+- /fam account <name> - Set mount for all characters
+- /fam reset - Reset character mount
+- /fam reset account - Reset account mount
+- /fam enable / /fam disable - Toggle the addon
+- /fam delay <seconds> - Adjust the remount delay
+- /fam debug - Toggle debug mode
+- /fam help - Show available commands
+
+Translations may not be perfect for all languages. If you'd like to help improve them, please open an issue on GitHub: https://github.com/Schlouppy/FarmAutoMount
