@@ -89,7 +89,6 @@ frame:SetScript("OnEvent", function(self, event, ...)
         isGathering = false
 
         -- Check if addon is enabled
-        dbg("enabled = " .. tostring(FarmAutoMountDB.enabled) .. ", class = " .. select(2, UnitClass("player")))
         if FarmAutoMountDB.enabled == false then return end
 
         -- Skip druids (they use Travel Form)
@@ -147,7 +146,6 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         local cleanName = CleanMountName(arg)
         FarmAutoMountCharDB.mountName = cleanName
         print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. cleanName)
-    
 
     -- Account-wide mount setting: /fam account <name>
     elseif command == "account" then

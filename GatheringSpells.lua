@@ -18,14 +18,14 @@ FarmAutoMount_GatheringSpells = {
         265837,     -- Classic
         265839,     -- Burning Crusade
         265841,     -- Wrath of the Lich King
-        265843,     -- cataclysm
+        265843,     -- Cataclysm
         265845,     -- Mists of Pandaria
         265847,     -- Warlords of Draenor
         265849,     -- Legion
         265851,     -- Battle for Azeroth
         309835,     -- Shadowlands
         366260,     -- Dragonflight
-        423341,     -- TheWarWithin
+        423341,     -- The War Within
     
     -- Herbalism
         2366,       -- Generic
@@ -33,13 +33,13 @@ FarmAutoMount_GatheringSpells = {
         265819,     -- Classic
         265821,     -- Burning Crusade
         265823,     -- Wrath of the Lich King
-        265825,     -- cataclysm
+        265825,     -- Cataclysm
         265827,     -- Mists of Pandaria
         265829,     -- Warlords of Draenor
         265834,     -- Legion
-        309780,     -- Battle for Azeroth
+        265835,     -- Battle for Azeroth
         309780,     -- Shadowlands
         366252,     -- Dragonflight
-        441327,     -- TheWarWithin
+        441327,     -- The War Within
 
 }

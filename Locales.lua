@@ -3,8 +3,8 @@ local L = FarmAutoMount_L
 
 -- English (default)
 L["Welcome"] = "Farm Auto Mount loaded (English). Type /fam help for commands."
-L["Account mount set to"] = "Account mount set to"
-L["Character mount set to"] = "Character mount set to"
+L["Account mount set to"] = "Account mount set to: "
+L["Character mount set to"] = "Character mount set to: "
 L["Enabled"] = "Enabled"
 L["Disabled"] = "Disabled"
 L["Delay set to"] = "Delay set to"
