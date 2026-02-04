@@ -40,3 +40,108 @@ if GetLocale() == "frFR" then
     L["Character mount reset"] = "Monture du personnage réinitialisée (utilise le réglage du compte)"
     L["Account mount reset"] = "Monture du compte réinitialisée"
 end
+
+-- German
+if GetLocale() == "deDE" then
+    L["Welcome"] = "Farm Auto Mount geladen (Deutsch). /fam help für Befehle."
+    L["Account mount set to"] = "Kontoreittier gesetzt auf: "
+    L["Character mount set to"] = "Charakterreittier gesetzt auf: "
+    L["Enabled"] = "Aktiviert"
+    L["Disabled"] = "Deaktiviert"
+    L["Delay set to"] = "Verzögerung gesetzt auf"
+    L["Usage delay"] = "Verwendung: /fam delay <Sekunden>"
+    L["Commands"] = "Befehle:"
+    L["Help mount"] = "/fam mount <Name> - Reittier für diesen Charakter"
+    L["Help mount account"] = "/fam account <Name> - Reittier für alle Charaktere"
+    L["Help enable"] = "/fam enable - Aktivieren"
+    L["Help disable"] = "/fam disable - Deaktivieren"
+    L["Help delay"] = "/fam delay <Sekunden> - Verzögerung vor dem Aufsitzen"
+    L["Help reset"] = "/fam reset - Charakterreittier zurücksetzen"
+    L["Help reset account"] = "/fam reset account - Kontoreittier zurücksetzen"
+    L["Character mount reset"] = "Charakterreittier zurückgesetzt (Kontoeinstellung wird verwendet)"
+    L["Account mount reset"] = "Kontoreittier zurückgesetzt"
+end
+
+-- Spanish
+if GetLocale() == "esES" or GetLocale() == "esMX" then
+    L["Welcome"] = "Farm Auto Mount cargado (Español). /fam help para comandos."
+    L["Account mount set to"] = "Montura de cuenta: "
+    L["Character mount set to"] = "Montura de personaje: "
+    L["Enabled"] = "Activado"
+    L["Disabled"] = "Desactivado"
+    L["Delay set to"] = "Retardo ajustado a"
+    L["Usage delay"] = "Uso: /fam delay <segundos>"
+    L["Commands"] = "Comandos:"
+    L["Help mount"] = "/fam mount <nombre> - Montura para este personaje"
+    L["Help mount account"] = "/fam account <nombre> - Montura para toda la cuenta"
+    L["Help enable"] = "/fam enable - Activar"
+    L["Help disable"] = "/fam disable - Desactivar"
+    L["Help delay"] = "/fam delay <segundos> - Retardo antes de montar"
+    L["Help reset"] = "/fam reset - Reiniciar montura del personaje"
+    L["Help reset account"] = "/fam reset account - Reiniciar montura de cuenta"
+    L["Character mount reset"] = "Montura del personaje reiniciada (usando ajuste de cuenta)"
+    L["Account mount reset"] = "Montura de cuenta reiniciada"
+end
+
+-- Italian
+if GetLocale() == "itIT" then
+    L["Welcome"] = "Farm Auto Mount caricato (Italiano). /fam help per i comandi."
+    L["Account mount set to"] = "Cavalcatura account: "
+    L["Character mount set to"] = "Cavalcatura personaggio: "
+    L["Enabled"] = "Attivato"
+    L["Disabled"] = "Disattivato"
+    L["Delay set to"] = "Ritardo impostato a"
+    L["Usage delay"] = "Uso: /fam delay <secondi>"
+    L["Commands"] = "Comandi:"
+    L["Help mount"] = "/fam mount <nome> - Cavalcatura per questo personaggio"
+    L["Help mount account"] = "/fam account <nome> - Cavalcatura per tutto l'account"
+    L["Help enable"] = "/fam enable - Attivare"
+    L["Help disable"] = "/fam disable - Disattivare"
+    L["Help delay"] = "/fam delay <secondi> - Ritardo prima di montare"
+    L["Help reset"] = "/fam reset - Reimpostare cavalcatura del personaggio"
+    L["Help reset account"] = "/fam reset account - Reimpostare cavalcatura dell'account"
+    L["Character mount reset"] = "Cavalcatura del personaggio reimpostata (usa impostazione account)"
+    L["Account mount reset"] = "Cavalcatura dell'account reimpostata"
+end
+
+-- Portuguese
+if GetLocale() == "ptBR" then
+    L["Welcome"] = "Farm Auto Mount carregado (Português). /fam help para comandos."
+    L["Account mount set to"] = "Montaria da conta: "
+    L["Character mount set to"] = "Montaria do personagem: "
+    L["Enabled"] = "Ativado"
+    L["Disabled"] = "Desativado"
+    L["Delay set to"] = "Atraso definido para"
+    L["Usage delay"] = "Uso: /fam delay <segundos>"
+    L["Commands"] = "Comandos:"
+    L["Help mount"] = "/fam mount <nome> - Montaria para este personagem"
+    L["Help mount account"] = "/fam account <nome> - Montaria para toda a conta"
+    L["Help enable"] = "/fam enable - Ativar"
+    L["Help disable"] = "/fam disable - Desativar"
+    L["Help delay"] = "/fam delay <segundos> - Atraso antes de montar"
+    L["Help reset"] = "/fam reset - Redefinir montaria do personagem"
+    L["Help reset account"] = "/fam reset account - Redefinir montaria da conta"
+    L["Character mount reset"] = "Montaria do personagem redefinida (usando configuração da conta)"
+    L["Account mount reset"] = "Montaria da conta redefinida"
+end
+
+-- Russian
+if GetLocale() == "ruRU" then
+    L["Welcome"] = "Farm Auto Mount загружен (Русский). /fam help для команд."
+    L["Account mount set to"] = "Маунт аккаунта: "
+    L["Character mount set to"] = "Маунт персонажа: "
+    L["Enabled"] = "Включено"
+    L["Disabled"] = "Отключено"
+    L["Delay set to"] = "Задержка установлена на"
+    L["Usage delay"] = "Использование: /fam delay <секунды>"
+    L["Commands"] = "Команды:"
+    L["Help mount"] = "/fam mount <имя> - Маунт для этого персонажа"
+    L["Help mount account"] = "/fam account <имя> - Маунт для всех персонажей"
+    L["Help enable"] = "/fam enable - Включить"
+    L["Help disable"] = "/fam disable - Отключить"
+    L["Help delay"] = "/fam delay <секунды> - Задержка перед маунтом"
+    L["Help reset"] = "/fam reset - Сбросить маунт персонажа"
+    L["Help reset account"] = "/fam reset account - Сбросить маунт аккаунта"
+    L["Character mount reset"] = "Маунт персонажа сброшен (используется настройка аккаунта)"
+    L["Account mount reset"] = "Маунт аккаунта сброшен"
+end
