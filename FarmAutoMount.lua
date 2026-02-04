@@ -69,14 +69,13 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- Ignore spells from other players
         if unit ~= "player" then return end
 
-        -- Check if the spell is a gathering spell
-        if spellID == 1239682         -- Lumber / Bucheronnage
-        or spellID == 265819          -- Herbalism
-        or spellID == 423341 then -- 265837 then     -- Mining
-
-            isGathering = true
-            dbg("Gathering spell detected: " .. spellID)
-
+        -- Check if the spell is in our gathering list
+        for _, gatherID in ipairs(FarmAutoMount_GatheringSpells) do
+            if spellID == gatherID then
+                isGathering = true
+                dbg("Gathering spell detected: " .. spellID)
+                break
+            end
         end
 
     elseif event == "LOOT_CLOSED" then
