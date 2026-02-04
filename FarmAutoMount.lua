@@ -16,6 +16,19 @@ local function dbg(msg)
     end
 end
 
+-- Clean mount name from WoW link formatting (brackets, color codes)
+local function CleanMountName(name)
+    local linkName = name:match("|h%[(.+)%]|h")
+    if linkName then name = linkName end
+    name = name:gsub("|c%x%x%x%x%x%x%x%x", "")
+    name = name:gsub("|r", "")
+    name = name:gsub("|H.-|h", "")
+    name = name:gsub("%[", "")
+    name = name:gsub("%]", "")
+    name = name:match("^%s*(.-)%s*$")
+    return name
+end
+
 -- Default settings
 local defaults = {
     mountName = nil,
@@ -134,11 +147,13 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         -- Check if it's an account-wide setting: /fam mount account <name>
         local accountMount = arg:lower():match("^account%s+(.+)")
         if accountMount then
-            FarmAutoMountDB.mountName = accountMount
-            print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. accountMount)
+            local cleanName = CleanMountName(accountMount)
+            FarmAutoMountDB.mountName = cleanName
+            print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. cleanName)
         else
-            FarmAutoMountCharDB.mountName = arg
-            print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. arg)
+            local cleanName = CleanMountName(arg)
+            FarmAutoMountCharDB.mountName = cleanName
+            print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. cleanName)
         end
 
     elseif command == "enable" then
