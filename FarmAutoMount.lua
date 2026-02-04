@@ -145,9 +145,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
     if command == "mount" then
 
         -- Check if it's an account-wide setting: /fam mount account <name>
-        local accountMount = arg:lower():match("^account%s+(.+)")
-        if accountMount then
-            local cleanName = CleanMountName(accountMount)
+        local isAccount = arg:lower():match("^account%s+")
+        if isAccount then
+            local mountArg = arg:match("^%S+%s+(.+)$")
+            local cleanName = CleanMountName(mountArg)
             FarmAutoMountDB.mountName = cleanName
             print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. cleanName)
         else
