@@ -44,7 +44,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
 
         -- No need to listen for this event anymore
         frame:UnregisterEvent("ADDON_LOADED")
-        dbg("Addon loaded, saved variables ready")
+
+        -- Welcome message
+        print("|cFF00FF00[FAM]|r " .. L["Welcome"])
 
     elseif event == "UNIT_SPELLCAST_SUCCEEDED" then
 

@@ -2,6 +2,7 @@ FarmAutoMount_L = {}
 local L = FarmAutoMount_L
 
 -- English (default)
+L["Welcome"] = "Farm Auto Mount loaded (English). Type /fam help for commands."
 L["Account mount set to"] = "Account mount set to"
 L["Character mount set to"] = "Character mount set to"
 L["Enabled"] = "Enabled"
@@ -17,6 +18,7 @@ L["Help delay"] = "/fam delay <seconds> - Set delay before mounting"
 
 -- French
 if GetLocale() == "frFR" then
+    L["Welcome"] = "Farm Auto Mount chargé (Français). Tapez /fam help pour les commandes."
     L["Account mount set to"] = "Monture du compte : "
     L["Character mount set to"] = "Monture du personnage : "
     L["Enabled"] = "Activé"
