@@ -145,3 +145,66 @@ if GetLocale() == "ruRU" then
     L["Character mount reset"] = "Маунт персонажа сброшен (используется настройка аккаунта)"
     L["Account mount reset"] = "Маунт аккаунта сброшен"
 end
+
+-- Korean
+if GetLocale() == "koKR" then
+    L["Welcome"] = "Farm Auto Mount 로드됨 (한국어). /fam help 로 명령어 확인."
+    L["Account mount set to"] = "계정 탈것: "
+    L["Character mount set to"] = "캐릭터 탈것: "
+    L["Enabled"] = "활성화됨"
+    L["Disabled"] = "비활성화됨"
+    L["Delay set to"] = "지연 시간 설정:"
+    L["Usage delay"] = "사용법: /fam delay <초>"
+    L["Commands"] = "명령어:"
+    L["Help mount"] = "/fam mount <이름> - 이 캐릭터의 탈것 설정"
+    L["Help mount account"] = "/fam account <이름> - 모든 캐릭터의 탈것 설정"
+    L["Help enable"] = "/fam enable - 활성화"
+    L["Help disable"] = "/fam disable - 비활성화"
+    L["Help delay"] = "/fam delay <초> - 탈것 소환 전 지연 시간"
+    L["Help reset"] = "/fam reset - 캐릭터 탈것 초기화"
+    L["Help reset account"] = "/fam reset account - 계정 탈것 초기화"
+    L["Character mount reset"] = "캐릭터 탈것 초기화됨 (계정 설정 사용)"
+    L["Account mount reset"] = "계정 탈것 초기화됨"
+end
+
+-- Simplified Chinese
+if GetLocale() == "zhCN" then
+    L["Welcome"] = "Farm Auto Mount 已加载 (简体中文)。输入 /fam help 查看命令。"
+    L["Account mount set to"] = "账号坐骑: "
+    L["Character mount set to"] = "角色坐骑: "
+    L["Enabled"] = "已启用"
+    L["Disabled"] = "已禁用"
+    L["Delay set to"] = "延迟设置为"
+    L["Usage delay"] = "用法: /fam delay <秒>"
+    L["Commands"] = "命令:"
+    L["Help mount"] = "/fam mount <名称> - 设置此角色的坐骑"
+    L["Help mount account"] = "/fam account <名称> - 设置所有角色的坐骑"
+    L["Help enable"] = "/fam enable - 启用"
+    L["Help disable"] = "/fam disable - 禁用"
+    L["Help delay"] = "/fam delay <秒> - 上坐骑前的延迟"
+    L["Help reset"] = "/fam reset - 重置角色坐骑"
+    L["Help reset account"] = "/fam reset account - 重置账号坐骑"
+    L["Character mount reset"] = "角色坐骑已重置 (使用账号设置)"
+    L["Account mount reset"] = "账号坐骑已重置"
+end
+
+-- Traditional Chinese
+if GetLocale() == "zhTW" then
+    L["Welcome"] = "Farm Auto Mount 已載入 (繁體中文)。輸入 /fam help 查看指令。"
+    L["Account mount set to"] = "帳號坐騎: "
+    L["Character mount set to"] = "角色坐騎: "
+    L["Enabled"] = "已啟用"
+    L["Disabled"] = "已停用"
+    L["Delay set to"] = "延遲設定為"
+    L["Usage delay"] = "用法: /fam delay <秒>"
+    L["Commands"] = "指令:"
+    L["Help mount"] = "/fam mount <名稱> - 設定此角色的坐騎"
+    L["Help mount account"] = "/fam account <名稱> - 設定所有角色的坐騎"
+    L["Help enable"] = "/fam enable - 啟用"
+    L["Help disable"] = "/fam disable - 停用"
+    L["Help delay"] = "/fam delay <秒> - 騎乘前的延遲"
+    L["Help reset"] = "/fam reset - 重設角色坐騎"
+    L["Help reset account"] = "/fam reset account - 重設帳號坐騎"
+    L["Character mount reset"] = "角色坐騎已重設 (使用帳號設定)"
+    L["Account mount reset"] = "帳號坐騎已重設"
+end
