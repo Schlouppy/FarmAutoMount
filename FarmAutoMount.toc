@@ -8,4 +8,5 @@
 ## IconTexture: Interface\AddOns\FarmAutoMount\logo
 
 Locales.lua
+GatheringSpells.lua
 FarmAutoMount.lua

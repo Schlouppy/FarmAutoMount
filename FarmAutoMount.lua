@@ -72,7 +72,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- Check if the spell is a gathering spell
         if spellID == 1239682         -- Lumber / Bucheronnage
         or spellID == 265819          -- Herbalism
-        or spellID == 265837 then     -- Mining
+        or spellID == 423341 then -- 265837 then     -- Mining
 
             isGathering = true
             dbg("Gathering spell detected: " .. spellID)
@@ -82,8 +82,12 @@ frame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "LOOT_CLOSED" then
 
         -- Only mount if we just gathered something
-        dbg("Loot closed, isGathering = " .. tostring(isGathering))
-        if not isGathering then return end
+        if not isGathering then
+            dbg("Loot closed, ignored (not gathering)")
+            return
+        end
+        dbg("Loot closed, mounting...")
+        isGathering = false
 
         -- Check if addon is enabled
         dbg("enabled = " .. tostring(FarmAutoMountDB.enabled) .. ", class = " .. select(2, UnitClass("player")))
@@ -119,9 +123,6 @@ frame:SetScript("OnEvent", function(self, event, ...)
             dbg("Summoning: favorite mount")
             C_MountJournal.SummonByID(0)
         end)
-
-        -- Reset gathering flag after mounting
-        isGathering = false
 
     end
 
