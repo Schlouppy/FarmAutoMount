@@ -5,6 +5,7 @@
 ## Version: 1.0.0
 ## SavedVariables: FarmAutoMountDB
 ## SavedVariablesPerCharacter: FarmAutoMountCharDB
+## IconTexture: Interface\AddOns\FarmAutoMount\logo
 
 Locales.lua
 FarmAutoMount.lua
