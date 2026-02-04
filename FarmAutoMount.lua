@@ -58,7 +58,6 @@ frame:SetScript("OnEvent", function(self, event, ...)
 
         -- Only mount if we just gathered something
         if not isGathering then return end
-        isGathering = false
 
         -- Check if addon is enabled
         if FarmAutoMountDB.enabled == false then return end
@@ -76,9 +75,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
         C_Timer.After(delay, function()
             if mountName then
                 -- Search for the mount by name in the journal
-                for i = 1, C_MountJournal.GetNumMounts() do
-                    local name, _, _, _, _, _, _, _, _, _, isCollected, mountID =
-                        C_MountJournal.GetMountInfoByID(C_MountJournal.GetDisplayedMountID(i))
+                for _, mountID in ipairs(C_MountJournal.GetMountIDs()) do
+                    local name, _, _, _, _, _, _, _, _, _, isCollected =
+                        C_MountJournal.GetMountInfoByID(mountID)
                     if isCollected and name == mountName then
                         C_MountJournal.SummonByID(mountID)
                         return
@@ -88,6 +87,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
             -- Fallback: summon favorite mount
             C_MountJournal.SummonByID(0)
         end)
+
+        -- Reset gathering flag after mounting
+        isGathering = false
 
     end
 
