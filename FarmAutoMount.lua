@@ -142,6 +142,11 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
     command = command:lower()
 
     if command == "mount" then
+        -- If no mount name provided, show usage
+        if arg == "" then
+            print("|cFFFF0000[FAM]|r " .. L["Usage mount"])
+            return
+        end
 
         local cleanName = CleanMountName(arg)
         FarmAutoMountCharDB.mountName = cleanName
@@ -149,6 +154,11 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
 
     -- Account-wide mount setting: /fam account <name>
     elseif command == "account" then
+
+        if arg == "" then
+            print("|cFFFF0000[FAM]|r " .. L["Usage mount"])
+            return
+        end
 
         local cleanName = CleanMountName(arg)
         FarmAutoMountDB.mountName = cleanName
