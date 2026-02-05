@@ -24,6 +24,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Reset account mount",
         ["Character mount reset"] = "Character mount reset (using account setting)",
         ["Account mount reset"] = "Account mount reset",
+        ["Mount not found"] = "Mount not found",
     },
 
     -- French
@@ -47,6 +48,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Réinitialiser la monture du compte",
         ["Character mount reset"] = "Monture du personnage réinitialisée (utilise le réglage du compte)",
         ["Account mount reset"] = "Monture du compte réinitialisée",
+        ["Mount not found"] = "Monture introuvable",
     },
 
     -- German
@@ -70,6 +72,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Kontoreittier zurücksetzen",
         ["Character mount reset"] = "Charakterreittier zurückgesetzt (Kontoeinstellung wird verwendet)",
         ["Account mount reset"] = "Kontoreittier zurückgesetzt",
+        ["Mount not found"] = "Reittier nicht gefunden",
     },
 
     -- Spanish
@@ -93,6 +96,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Reiniciar montura de cuenta",
         ["Character mount reset"] = "Montura del personaje reiniciada (usando ajuste de cuenta)",
         ["Account mount reset"] = "Montura de cuenta reiniciada",
+        ["Mount not found"] = "Montura no encontrada",
     },
 
     -- Italian
@@ -116,6 +120,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Reimpostare cavalcatura dell'account",
         ["Character mount reset"] = "Cavalcatura del personaggio reimpostata (usa impostazione account)",
         ["Account mount reset"] = "Cavalcatura dell'account reimpostata",
+        ["Mount not found"] = "Cavalcatura non trovata",
     },
 
     -- Portuguese (Brazilian)
@@ -139,6 +144,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Redefinir montaria da conta",
         ["Character mount reset"] = "Montaria do personagem redefinida (usando configuração da conta)",
         ["Account mount reset"] = "Montaria da conta redefinida",
+        ["Mount not found"] = "Montaria não encontrada",
     },
 
     -- Russian
@@ -162,6 +168,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - Сбросить маунт аккаунта",
         ["Character mount reset"] = "Маунт персонажа сброшен (используется настройка аккаунта)",
         ["Account mount reset"] = "Маунт аккаунта сброшен",
+        ["Mount not found"] = "Маунт не найден",
     },
 
     -- Korean
@@ -185,6 +192,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - 계정 탈것 초기화",
         ["Character mount reset"] = "캐릭터 탈것 초기화됨 (계정 설정 사용)",
         ["Account mount reset"] = "계정 탈것 초기화됨",
+        ["Mount not found"] = "탈것을 찾을 수 없음",
     },
 
     -- Simplified Chinese
@@ -208,6 +216,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - 重置账号坐骑",
         ["Character mount reset"] = "角色坐骑已重置 (使用账号设置)",
         ["Account mount reset"] = "账号坐骑已重置",
+        ["Mount not found"] = "未找到坐骑",
     },
 
     -- Traditional Chinese
@@ -231,6 +240,7 @@ local translations = {
         ["Help reset account"] = "/fam reset account - 重設帳號坐騎",
         ["Character mount reset"] = "角色坐騎已重設 (使用帳號設定)",
         ["Account mount reset"] = "帳號坐騎已重設",
+        ["Mount not found"] = "找不到坐騎",
     },
 }
 

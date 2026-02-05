@@ -29,9 +29,20 @@ local function CleanMountName(name)
     return name
 end
 
+-- Find mount ID from name (search once, store ID)
+local function FindMountIDByName(searchName)
+    for _, mountID in ipairs(C_MountJournal.GetMountIDs()) do
+        local name = C_MountJournal.GetMountInfoByID(mountID)
+        if name == searchName then
+            return mountID, name
+        end
+    end
+    return nil
+end
+
 -- Default settings
 local defaults = {
-    mountName = nil,
+    mountID = nil,
     enabled = true,
     delay = 0.5,
 }
@@ -98,28 +109,13 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- Get delay (saved or default)
         local delay = FarmAutoMountDB.delay or defaults.delay
 
-        -- Get mount name (character first, then account)
-        local mountName = FarmAutoMountCharDB.mountName or FarmAutoMountDB.mountName
+        -- Get mount ID (character first, then account, then favorite = 0)
+        local mountID = FarmAutoMountCharDB.mountID or FarmAutoMountDB.mountID or 0
 
-        dbg("Mounting in " .. delay .. "s (mount: " .. (mountName or "favorite") .. ")")
+        dbg("Mounting in " .. delay .. "s (mountID: " .. mountID .. ")")
 
         C_Timer.After(delay, function()
-            if mountName then
-                -- Search for the mount by name in the journal
-                for _, mountID in ipairs(C_MountJournal.GetMountIDs()) do
-                    local name, _, _, _, _, _, _, _, _, _, isCollected =
-                        C_MountJournal.GetMountInfoByID(mountID)
-                    if isCollected and name == mountName then
-                        dbg("Summoning: " .. name)
-                        C_MountJournal.SummonByID(mountID)
-                        return
-                    end
-                end
-                dbg("Mount not found: " .. mountName .. ", using favorite")
-            end
-            -- Fallback: summon favorite mount
-            dbg("Summoning: favorite mount")
-            C_MountJournal.SummonByID(0)
+            C_MountJournal.SummonByID(mountID)
         end)
 
     end
@@ -149,20 +145,30 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         end
 
         local cleanName = CleanMountName(arg)
-        FarmAutoMountCharDB.mountName = cleanName
-        print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. cleanName)
+        local mountID, mountName = FindMountIDByName(cleanName)
+        if mountID then
+            FarmAutoMountCharDB.mountID = mountID
+            print("|cFF00FF00[FAM]|r " .. L["Character mount set to"] .. mountName)
+        else
+            print("|cFFFF0000[FAM]|r " .. L["Mount not found"] .. ": " .. cleanName)
+        end
 
     -- Account-wide mount setting: /fam account <name>
     elseif command == "account" then
-
+        -- If no mount name provided, show usage
         if arg == "" then
-            print("|cFFFF0000[FAM]|r " .. L["Usage mount"])
+            print("|cFFFF0000[FAM]|r " .. L["Usage account"])
             return
         end
 
         local cleanName = CleanMountName(arg)
-        FarmAutoMountDB.mountName = cleanName
-        print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. cleanName)
+        local mountID, mountName = FindMountIDByName(cleanName)
+        if mountID then
+            FarmAutoMountDB.mountID = mountID
+            print("|cFF00FF00[FAM]|r " .. L["Account mount set to"] .. mountName)
+        else
+            print("|cFFFF0000[FAM]|r " .. L["Mount not found"] .. ": " .. cleanName)
+        end
     
     elseif command == "enable" then
         FarmAutoMountDB.enabled = true
@@ -183,10 +189,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
 
     elseif command == "reset" then
         if arg:lower():match("^account") then
-            FarmAutoMountDB.mountName = nil
+            FarmAutoMountDB.mountID = nil
             print("|cFF00FF00[FAM]|r " .. L["Account mount reset"])
         else
-            FarmAutoMountCharDB.mountName = nil
+            FarmAutoMountCharDB.mountID = nil
             print("|cFF00FF00[FAM]|r " .. L["Character mount reset"])
         end
 
