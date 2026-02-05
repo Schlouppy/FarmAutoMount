@@ -69,6 +69,22 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- No need to listen for this event anymore
         frame:UnregisterEvent("ADDON_LOADED")
 
+        -- Migration: convert old mountName to mountID
+        if FarmAutoMountDB.mountName and not FarmAutoMountDB.mountID then
+            local mountID = FindMountIDByName(FarmAutoMountDB.mountName)
+            if mountID then
+                FarmAutoMountDB.mountID = mountID
+            end
+            FarmAutoMountDB.mountName = nil
+        end
+        if FarmAutoMountCharDB.mountName and not FarmAutoMountCharDB.mountID then
+            local mountID = FindMountIDByName(FarmAutoMountCharDB.mountName)
+            if mountID then
+                FarmAutoMountCharDB.mountID = mountID
+            end
+            FarmAutoMountCharDB.mountName = nil
+        end
+
         -- Welcome message
         print("|cFF00FF00[FAM]|r " .. L["Welcome"])
 
