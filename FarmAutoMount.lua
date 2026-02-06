@@ -137,6 +137,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
             isTryingToMount = true
             C_MountJournal.SummonByID(mountID)
             C_Timer.After(2, function()
+                if isTryingToMount then
+                    dbg("Mount cast completed without error")
+                end
                 isTryingToMount = false
             end)
         end)
