@@ -48,6 +48,7 @@ local defaults = {
     mountID = nil,
     enabled = true,
     delay = 0.5,
+    silent = false,
 }
 
 -- Create a frame to listen to game events
@@ -148,7 +149,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "UI_ERROR_MESSAGE" then
         local _, message = ...
         if isTryingToMount then
-            print("|cFFFF0000[FAM]|r " .. L["Automount failed"] .. ": " .. message)
+            if not FarmAutoMountDB.silent then
+                print("|cFFFF0000[FAM]|r " .. L["Automount failed"] .. ": " .. message)
+            end
             isTryingToMount = false
         end
 
@@ -230,6 +233,14 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
             print("|cFF00FF00[FAM]|r " .. L["Character mount reset"])
         end
 
+    elseif command == "silent" then
+        FarmAutoMountDB.silent = not FarmAutoMountDB.silent
+        if FarmAutoMountDB.silent then
+            print("|cFF00FF00[FAM]|r " .. L["Error notifications disabled"])
+        else
+            print("|cFF00FF00[FAM]|r " .. L["Error notifications enabled"])
+        end
+
     elseif command == "debug" then
         debugMode = not debugMode
         print("|cFF00FF00[FAM]|r Debug: " .. (debugMode and "ON" or "OFF"))
@@ -243,6 +254,7 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         print("  " .. L["Help delay"])
         print("  " .. L["Help reset"])
         print("  " .. L["Help reset account"])
+        print("  " .. L["Help silent"])
         print("  /fam debug - Toggle debug mode")
 
     end

@@ -26,6 +26,9 @@ local translations = {
         ["Account mount reset"] = "Account mount reset",
         ["Mount not found"] = "Mount not found",
         ["Automount failed"] = "Automount failed",
+        ["Error notifications enabled"] = "Error notifications enabled",
+        ["Error notifications disabled"] = "Error notifications disabled",
+        ["Help silent"] = "/fam silent - Toggle error notifications",
     },
 
     -- French
@@ -51,6 +54,9 @@ local translations = {
         ["Account mount reset"] = "Monture du compte réinitialisée",
         ["Mount not found"] = "Monture introuvable",
         ["Automount failed"] = "Automount impossible",
+        ["Error notifications enabled"] = "Notifications d'erreur activées",
+        ["Error notifications disabled"] = "Notifications d'erreur désactivées",
+        ["Help silent"] = "/fam silent - Activer/désactiver les notifications d'erreur",
     },
 
     -- German
@@ -76,6 +82,9 @@ local translations = {
         ["Account mount reset"] = "Kontoreittier zurückgesetzt",
         ["Mount not found"] = "Reittier nicht gefunden",
         ["Automount failed"] = "Automount fehlgeschlagen",
+        ["Error notifications enabled"] = "Fehlerbenachrichtigungen aktiviert",
+        ["Error notifications disabled"] = "Fehlerbenachrichtigungen deaktiviert",
+        ["Help silent"] = "/fam silent - Fehlerbenachrichtigungen umschalten",
     },
 
     -- Spanish
@@ -101,6 +110,9 @@ local translations = {
         ["Account mount reset"] = "Montura de cuenta reiniciada",
         ["Mount not found"] = "Montura no encontrada",
         ["Automount failed"] = "Automount fallido",
+        ["Error notifications enabled"] = "Notificaciones de error activadas",
+        ["Error notifications disabled"] = "Notificaciones de error desactivadas",
+        ["Help silent"] = "/fam silent - Alternar notificaciones de error",
     },
 
     -- Italian
@@ -126,6 +138,9 @@ local translations = {
         ["Account mount reset"] = "Cavalcatura dell'account reimpostata",
         ["Mount not found"] = "Cavalcatura non trovata",
         ["Automount failed"] = "Automount fallito",
+        ["Error notifications enabled"] = "Notifiche di errore attivate",
+        ["Error notifications disabled"] = "Notifiche di errore disattivate",
+        ["Help silent"] = "/fam silent - Attiva/disattiva notifiche di errore",
     },
 
     -- Portuguese (Brazilian)
@@ -151,6 +166,9 @@ local translations = {
         ["Account mount reset"] = "Montaria da conta redefinida",
         ["Mount not found"] = "Montaria não encontrada",
         ["Automount failed"] = "Automount falhou",
+        ["Error notifications enabled"] = "Notificações de erro ativadas",
+        ["Error notifications disabled"] = "Notificações de erro desativadas",
+        ["Help silent"] = "/fam silent - Alternar notificações de erro",
     },
 
     -- Russian
@@ -176,6 +194,9 @@ local translations = {
         ["Account mount reset"] = "Маунт аккаунта сброшен",
         ["Mount not found"] = "Маунт не найден",
         ["Automount failed"] = "Automount не удался",
+        ["Error notifications enabled"] = "Уведомления об ошибках включены",
+        ["Error notifications disabled"] = "Уведомления об ошибках отключены",
+        ["Help silent"] = "/fam silent - Переключить уведомления об ошибках",
     },
 
     -- Korean
@@ -201,6 +222,9 @@ local translations = {
         ["Account mount reset"] = "계정 탈것 초기화됨",
         ["Mount not found"] = "탈것을 찾을 수 없음",
         ["Automount failed"] = "Automount 실패",
+        ["Error notifications enabled"] = "오류 알림 활성화됨",
+        ["Error notifications disabled"] = "오류 알림 비활성화됨",
+        ["Help silent"] = "/fam silent - 오류 알림 전환",
     },
 
     -- Simplified Chinese
@@ -226,6 +250,9 @@ local translations = {
         ["Account mount reset"] = "账号坐骑已重置",
         ["Mount not found"] = "未找到坐骑",
         ["Automount failed"] = "Automount 失败",
+        ["Error notifications enabled"] = "错误通知已启用",
+        ["Error notifications disabled"] = "错误通知已禁用",
+        ["Help silent"] = "/fam silent - 切换错误通知",
     },
 
     -- Traditional Chinese
@@ -251,6 +278,9 @@ local translations = {
         ["Account mount reset"] = "帳號坐騎已重設",
         ["Mount not found"] = "找不到坐騎",
         ["Automount failed"] = "Automount 失敗",
+        ["Error notifications enabled"] = "錯誤通知已啟用",
+        ["Error notifications disabled"] = "錯誤通知已停用",
+        ["Help silent"] = "/fam silent - 切換錯誤通知",
     },
 }
 
