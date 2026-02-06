@@ -71,6 +71,13 @@ frame:SetScript("OnEvent", function(self, event, ...)
         FarmAutoMountDB = FarmAutoMountDB or {}
         FarmAutoMountCharDB = FarmAutoMountCharDB or {}
 
+        -- Merge defaults into saved variables
+        for k, v in pairs(defaults) do
+            if FarmAutoMountDB[k] == nil then
+                FarmAutoMountDB[k] = v
+            end
+        end
+
         -- No need to listen for this event anymore
         frame:UnregisterEvent("ADDON_LOADED")
 
