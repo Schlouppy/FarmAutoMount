@@ -8,6 +8,7 @@
 local L = FarmAutoMount_L
 local isGathering = false
 local debugMode = false
+local isTryingToMount = false
 
 -- Print only when debug mode is on
 local function dbg(msg)
@@ -53,6 +54,7 @@ local frame = CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 frame:RegisterEvent("LOOT_CLOSED")
+frame:RegisterEvent("UI_ERROR_MESSAGE")
 
 -- Called every time a registered event happens
 frame:SetScript("OnEvent", function(self, event, ...)
@@ -132,8 +134,19 @@ frame:SetScript("OnEvent", function(self, event, ...)
         dbg("Mounting in " .. delay .. "s (mountID: " .. mountID .. ")")
 
         C_Timer.After(delay, function()
+            isTryingToMount = true
             C_MountJournal.SummonByID(mountID)
+            C_Timer.After(2, function()
+                isTryingToMount = false
+            end)
         end)
+
+    elseif event == "UI_ERROR_MESSAGE" then
+        local _, message = ...
+        if isTryingToMount then
+            print("|cFFFF0000[FAM]|r " .. message)
+            isTryingToMount = false
+        end
 
     end
 
