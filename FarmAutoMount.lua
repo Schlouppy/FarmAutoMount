@@ -144,7 +144,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
     elseif event == "UI_ERROR_MESSAGE" then
         local _, message = ...
         if isTryingToMount then
-            print("|cFFFF0000[FAM]|r " .. message)
+            print("|cFFFF0000[FAM]|r " .. L["Automount failed"] .. ": " .. message)
             isTryingToMount = false
         end
 
