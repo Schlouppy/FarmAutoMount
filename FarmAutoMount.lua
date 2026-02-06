@@ -19,14 +19,15 @@ end
 
 -- Clean mount name from WoW link formatting (brackets, color codes)
 local function CleanMountName(name)
+    if not name then return nil end
     local linkName = name:match("|h%[(.+)%]|h")
-    if linkName then name = linkName end
-    name = name:gsub("|c%x%x%x%x%x%x%x%x", "")
-    name = name:gsub("|r", "")
-    name = name:gsub("|H.-|h", "")
-    name = name:gsub("%[", "")
-    name = name:gsub("%]", "")
-    name = name:match("^%s*(.-)%s*$")
+    name = linkName or name
+    name = name
+        :gsub("|c%x%x%x%x%x%x%x%x", "")
+        :gsub("|r", "")
+        :gsub("|H.-|h", "")
+        :gsub("[%[%]]", "")
+        :match("^%s*(.-)%s*$")
     return name
 end
 
