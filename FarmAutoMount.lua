@@ -32,8 +32,9 @@ end
 -- Find mount ID from name (search once, store ID)
 local function FindMountIDByName(searchName)
     for _, mountID in ipairs(C_MountJournal.GetMountIDs()) do
-        local name = C_MountJournal.GetMountInfoByID(mountID)
-        if name == searchName then
+        local name, _, _, _, _, _, _, _, _, _, isCollected =
+            C_MountJournal.GetMountInfoByID(mountID)
+        if isCollected and name == searchName then
             return mountID, name
         end
     end
