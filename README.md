@@ -118,9 +118,6 @@ Want to help? Pull requests are welcome!
 2. Make your changes
 3. Submit a pull request
 
-### MoP Classic Support
-Looking for help testing/maintaining a MoP Classic version! If you play MoP Classic and know a bit of Lua, reach out!
-
 ---
 
 ## 📜 Changelog
