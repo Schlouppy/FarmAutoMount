@@ -1,8 +1,8 @@
-## Interface: 120000
+## Interface: 120001
 ## Title: Farm Auto Mount
 ## Notes: Automatically remounts after gathering herbs, ore, or lumber.
 ## Author: Schlouppy
-## Version: 1.1.0
+## Version: 1.1.2
 ## SavedVariables: FarmAutoMountDB
 ## SavedVariablesPerCharacter: FarmAutoMountCharDB
 ## IconTexture: Interface\AddOns\FarmAutoMount\logo
