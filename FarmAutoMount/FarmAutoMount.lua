@@ -130,6 +130,12 @@ frame:SetScript("OnEvent", function(self, event, ...)
         -- Check if addon is enabled
         if FarmAutoMountDB.enabled == false then return end
 
+        -- Skip if already mounted (lumber can be gathered while mounted)
+        if IsMounted() then
+            dbg("Already mounted, skipping")
+            return
+        end
+
         -- Skip druids (they use Travel Form)
         local _, class = UnitClass("player")
         if class == "DRUID" then return end
