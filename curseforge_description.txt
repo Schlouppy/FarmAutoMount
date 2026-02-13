@@ -1,30 +1,50 @@
 Short description:
-Automatically remounts after gathering herbs, mining ore, or gathering lumber. Supports any mount including Druid Travel Form. Lightweight and simple - just install and forget.
+Automatically remounts after gathering herbs, mining ore, or gathering lumber. Won't interfere if you can gather while mounted. Lightweight and simple - just install and forget.
 
-Full description:
+Full description (HTML for CurseForge):
 
-Farm Auto Mount automatically resummons your mount right after gathering any resource — herbs, ore, or lumber. No more fumbling with keybinds between each node.
+<h2>Farm Auto Mount</h2>
 
-This addon was inspired by existing addons like AutoMountFix, but the code was written entirely from scratch as a learning project, with the help of AI (Claude).
+<p>Automatically resummons your mount right after gathering any resource — herbs, ore, or lumber. No more fumbling with keybinds between each node.</p>
 
-Features:
-- Automatically remounts after harvesting herbs, mining ore, or gathering lumber
-- Choose any mount from your collection via /fam mount <name>
-- Per-character and account-wide mount settings
-- Supports Shift+click mount links from the journal
-- Druids are automatically skipped (Travel Form)
-- Configurable delay between harvest and mount summon
-- Settings persist between sessions
-- 10 languages supported (EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW)
+<p>If you can gather without dismounting (e.g. mounted lumber harvesting), the addon detects it and stays out of the way.</p>
 
-Commands:
-- /fam mount <name> - Set mount for this character
-- /fam account <name> - Set mount for all characters
-- /fam reset - Reset character mount
-- /fam reset account - Reset account mount
-- /fam enable / /fam disable - Toggle the addon
-- /fam delay <seconds> - Adjust the remount delay
-- /fam debug - Toggle debug mode
-- /fam help - Show available commands
+<p>Written from scratch as a learning project, inspired by AutoMountFix. Built with the help of AI (Claude).</p>
 
-Translations may not be perfect for all languages. If you'd like to help improve them, please open an issue on GitHub: https://github.com/Schlouppy/FarmAutoMount
+<h3>Features</h3>
+<ul>
+<li><b>Auto-remount</b> — Mounts automatically after you finish looting a gathering node</li>
+<li><b>Mounted gathering</b> — Won't interfere if you can gather without dismounting</li>
+<li><b>Custom mount</b> — Choose a specific mount per character or account-wide</li>
+<li><b>Configurable delay</b> — Adjust the delay before mounting (default: 0.5s)</li>
+<li><b>Druid-friendly</b> — Automatically skips druids (Travel Form is better!)</li>
+<li><b>Error notifications</b> — Shows a message when mounting fails (in combat, interrupted, etc.)</li>
+<li><b>10 languages</b> — EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW</li>
+</ul>
+
+<h3>Commands</h3>
+<table>
+<tr><td><b>/fam mount &lt;name&gt;</b></td><td>Set mount for this character</td></tr>
+<tr><td><b>/fam account &lt;name&gt;</b></td><td>Set mount for all characters</td></tr>
+<tr><td><b>/fam reset</b></td><td>Reset character mount (use account setting)</td></tr>
+<tr><td><b>/fam reset account</b></td><td>Reset account mount (use favourite)</td></tr>
+<tr><td><b>/fam enable / disable</b></td><td>Toggle the addon</td></tr>
+<tr><td><b>/fam delay &lt;seconds&gt;</b></td><td>Adjust the remount delay</td></tr>
+<tr><td><b>/fam silent</b></td><td>Toggle error notifications</td></tr>
+<tr><td><b>/fam debug</b></td><td>Toggle debug mode</td></tr>
+</table>
+
+<p><b>Tip:</b> Shift+click a mount in your journal to paste its name into chat!</p>
+
+<h3>FAQ</h3>
+<p><b>I can gather lumber while mounted, will the addon cause issues?</b><br/>
+No! The addon detects if you're already mounted and won't try to remount.</p>
+
+<p><b>Why doesn't it work for my Druid?</b><br/>
+Druids are automatically skipped. Travel Form is instant and better than any mount.</p>
+
+<p><b>I don't want error messages in chat</b><br/>
+Toggle them off: <code>/fam silent</code></p>
+
+<h3>Feedback</h3>
+<p>Translations may not be perfect for all languages. If you'd like to help improve them, or if you have any suggestions, please open an issue on <a href="https://github.com/Schlouppy/FarmAutoMount">GitHub</a>.</p>
