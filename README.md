@@ -1,7 +1,7 @@
 # 🌿 Farm Auto Mount
 
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/wow/addons/farmautomount)
-[![Version](https://img.shields.io/badge/Version-1.1.0-green)]()
+[![Version](https://img.shields.io/badge/Version-1.1.3-green)]()
 [![WoW](https://img.shields.io/badge/WoW-The%20War%20Within-blue)]()
 
 **Automatically remounts after gathering herbs, ore, or lumber.**
@@ -15,6 +15,7 @@ Lightweight, no UI, no bloat. Just does one thing and does it well.
 | Feature | Description |
 |---------|-------------|
 | 🐴 **Auto-remount** | Mounts automatically after you finish looting a gathering node |
+| 🪵 **Mounted gathering** | Won't interfere if you can gather without dismounting |
 | 🎯 **Custom mount** | Choose a specific mount per character or account-wide |
 | ⏱️ **Configurable delay** | Adjust the delay before mounting (default: 0.5s) |
 | 🐻 **Druid-friendly** | Automatically skips druids (Travel Form is better!) |
@@ -84,6 +85,9 @@ All commands start with `/fam`:
 
 ## ❓ FAQ
 
+### I can gather lumber while mounted, will the addon cause issues?
+No! The addon detects if you're already mounted and won't try to remount.
+
 ### Why doesn't it work for my Druid?
 Druids are automatically skipped! Travel Form is instant and better than any mount. The addon assumes you're using it.
 
@@ -121,6 +125,10 @@ Want to help? Pull requests are welcome!
 ---
 
 ## 📜 Changelog
+
+### v1.1.3
+- 🪵 Mounted gathering support (won't remount if already mounted)
+- 🔧 Updated Interface version for WoW 12.0.0.1
 
 ### v1.1.0
 - ✨ Error notifications when mounting fails

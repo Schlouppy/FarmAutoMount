@@ -2,6 +2,7 @@ Farm Auto Mount
 ===============
 
 Automatically remounts after gathering herbs, ore, or lumber.
+If you can gather while mounted, the addon won't try to remount.
 
 Commands:
   /fam mount <name>      Set mount for this character
