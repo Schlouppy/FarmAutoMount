@@ -1,6 +1,6 @@
 # Instructions Claude - FarmAutoMount
 
-Basé sur les instructions racine du projet Tool wow.
+Lire `../CLAUDE_INSTRUCTIONS.txt` pour les instructions complètes du projet racine.
 
 ## Environnement
 
