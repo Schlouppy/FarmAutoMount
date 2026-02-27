@@ -26,6 +26,7 @@ FarmAutoMount_GatheringSpells = {
         309835,     -- Shadowlands
         366260,     -- Dragonflight
         423341,     -- The War Within
+        471013,     -- Midnight
     
     -- Herbalism
         2366,       -- Generic
@@ -41,5 +42,6 @@ FarmAutoMount_GatheringSpells = {
         309780,     -- Shadowlands
         366252,     -- Dragonflight
         441327,     -- The War Within
+        471009,     -- Midnight
 
 }
