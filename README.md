@@ -1,8 +1,8 @@
 # 🌿 Farm Auto Mount
 
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/wow/addons/farmautomount)
-[![Version](https://img.shields.io/badge/Version-1.1.3-green)]()
-[![WoW](https://img.shields.io/badge/WoW-The%20War%20Within-blue)]()
+[![Version](https://img.shields.io/badge/Version-1.1.5-green)]()
+[![WoW](https://img.shields.io/badge/WoW-Midnight-blue)]()
 
 **Automatically remounts after gathering herbs, ore, or lumber.**
 
@@ -61,7 +61,7 @@ All commands start with `/fam`:
 
 - Uses your **favorite mount** if no mount is configured
 - **0.5 second delay** before mounting (avoids mounting during looting animation)
-- Error notifications **enabled** by default
+- Error notifications **disabled** by default (use `/fam silent` to enable)
 
 ---
 
@@ -125,6 +125,14 @@ Want to help? Pull requests are welcome!
 ---
 
 ## 📜 Changelog
+
+### v1.1.5
+- 🔇 Error notifications now silent by default (`/fam silent` to toggle)
+- 📦 Added chest/lock opening support (Open Lock, Void-Tainted Remains)
+- 📝 Improved comments in GatheringSpells.lua
+
+### v1.1.4
+- ✨ Added Midnight spell IDs for Mining and Herbalism
 
 ### v1.1.3
 - 🪵 Mounted gathering support (won't remount if already mounted)

@@ -48,7 +48,7 @@ local defaults = {
     mountID = nil,
     enabled = true,
     delay = 0.5,
-    silent = false,
+    silent = true,
 }
 
 -- Create a frame to listen to game events

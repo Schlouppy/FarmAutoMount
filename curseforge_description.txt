@@ -18,7 +18,7 @@ Full description (HTML for CurseForge):
 <li><b>Custom mount</b> — Choose a specific mount per character or account-wide</li>
 <li><b>Configurable delay</b> — Adjust the delay before mounting (default: 0.5s)</li>
 <li><b>Druid-friendly</b> — Automatically skips druids (Travel Form is better!)</li>
-<li><b>Error notifications</b> — Shows a message when mounting fails (in combat, interrupted, etc.)</li>
+<li><b>Error notifications</b> — Shows a message when mounting fails (in combat, interrupted, etc. - disabled by default)</li>
 <li><b>10 languages</b> — EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW</li>
 </ul>
 
@@ -44,7 +44,7 @@ No! The addon detects if you're already mounted and won't try to remount.</p>
 Druids are automatically skipped. Travel Form is instant and better than any mount.</p>
 
 <p><b>I don't want error messages in chat</b><br/>
-Toggle them off: <code>/fam silent</code></p>
+Error notifications are silent by default since v1.1.5. Use <code>/fam silent</code> to toggle them on.</p>
 
 <h3>Feedback</h3>
 <p>Translations may not be perfect for all languages. If you'd like to help improve them, or if you have any suggestions, please open an issue on <a href="https://github.com/Schlouppy/FarmAutoMount">GitHub</a>.</p>
