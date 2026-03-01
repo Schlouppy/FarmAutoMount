@@ -4,13 +4,19 @@
     Used to detect when the player is gathering a resource.
     Add new IDs here when Blizzard adds new expansions.
 ]]
+    -- Collect spellID from /etrace or similar tools
 
 FarmAutoMount_GatheringSpells = {
-    -- Collect spellID from /etrace or similar tools
+    
+
+    -- Miscelaneous 
+
+        3365,       -- Opening Miscelaneous chest/lock
+        98324,      -- Void-Tainted Remains 
 
     -- Lumber / Bucheronnage
 
-        1239682,
+        1239682,    -- All expansions
 
     -- Mining
         2575,       -- Generic
