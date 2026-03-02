@@ -5,7 +5,7 @@ Full description (HTML for CurseForge):
 
 <h2>Farm Auto Mount</h2>
 
-<p>Automatically resummons your mount right after gathering any resource — herbs, ore, or lumber. No more fumbling with keybinds between each node.</p>
+<p>Automatically resummons your mount right after gathering any resource — herbs, ore, lumber, or certain containers (chests, bone piles…). No more fumbling with keybinds between each node.</p>
 
 <p>If you can gather without dismounting (e.g. mounted lumber harvesting), the addon detects it and stays out of the way.</p>
 
@@ -14,6 +14,7 @@ Full description (HTML for CurseForge):
 <h3>Features</h3>
 <ul>
 <li><b>Auto-remount</b> — Mounts automatically after you finish looting a gathering node</li>
+<li><b>Container support</b> — Also remounts after looting chests, bone piles, and other containers</li>
 <li><b>Mounted gathering</b> — Won't interfere if you can gather without dismounting</li>
 <li><b>Custom mount</b> — Choose a specific mount per character or account-wide</li>
 <li><b>Configurable delay</b> — Adjust the delay before mounting (default: 0.5s)</li>
