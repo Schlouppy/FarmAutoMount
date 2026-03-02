@@ -1,51 +1,49 @@
 Short description:
-Automatically remounts after gathering herbs, mining ore, or gathering lumber. Won't interfere if you can gather while mounted. Lightweight and simple - just install and forget.
+Automatically remounts after gathering herbs, mining ore, gathering lumber, or looting containers. Won't interfere if you can gather while mounted. Lightweight and simple - just install and forget.
 
-Full description (HTML for CurseForge):
+Full description (Markdown for CurseForge):
 
-<h2>Farm Auto Mount</h2>
+# 🌿 Farm Auto Mount
 
-<p>Automatically resummons your mount right after gathering any resource — herbs, ore, lumber, or certain containers (chests, bone piles…). No more fumbling with keybinds between each node.</p>
+Automatically resummons your mount right after gathering any resource — herbs, ore, lumber, or certain containers (chests, bone piles…). No more fumbling with keybinds between each node.
 
-<p>If you can gather without dismounting (e.g. mounted lumber harvesting), the addon detects it and stays out of the way.</p>
+If you can gather without dismounting (e.g. mounted lumber harvesting), the addon detects it and stays out of the way.
 
-<p>Written from scratch as a learning project, inspired by AutoMountFix. Built with the help of AI (Claude).</p>
+## ✨ Features
 
-<h3>Features</h3>
-<ul>
-<li><b>Auto-remount</b> — Mounts automatically after you finish looting a gathering node</li>
-<li><b>Container support</b> — Also remounts after looting chests, bone piles, and other containers</li>
-<li><b>Mounted gathering</b> — Won't interfere if you can gather without dismounting</li>
-<li><b>Custom mount</b> — Choose a specific mount per character or account-wide</li>
-<li><b>Configurable delay</b> — Adjust the delay before mounting (default: 0.5s)</li>
-<li><b>Druid-friendly</b> — Automatically skips druids (Travel Form is better!)</li>
-<li><b>Error notifications</b> — Shows a message when mounting fails (in combat, interrupted, etc. - disabled by default)</li>
-<li><b>10 languages</b> — EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW</li>
-</ul>
+*   🐴 **Auto-remount** — Mounts automatically after looting a gathering node
+*   📦 **Container support** — Also remounts after looting chests, bone piles, and other containers
+*   🪵 **Mounted gathering** — Won't interfere if you can gather without dismounting
+*   🎯 **Custom mount** — Per-character or account-wide mount setting
+*   ⏱️ **Configurable delay** — Adjust the delay before mounting (default: 0.5s)
+*   🐻 **Druid-friendly** — Automatically skips druids (Travel Form is better!)
+*   🔇 **Silent by default** — Error notifications disabled by default (`/fam silent` to toggle)
+*   🌍 **10 languages** — EN, FR, DE, ES, IT, PT, RU, KO, ZH-CN, ZH-TW
 
-<h3>Commands</h3>
-<table>
-<tr><td><b>/fam mount &lt;name&gt;</b></td><td>Set mount for this character</td></tr>
-<tr><td><b>/fam account &lt;name&gt;</b></td><td>Set mount for all characters</td></tr>
-<tr><td><b>/fam reset</b></td><td>Reset character mount (use account setting)</td></tr>
-<tr><td><b>/fam reset account</b></td><td>Reset account mount (use favourite)</td></tr>
-<tr><td><b>/fam enable / disable</b></td><td>Toggle the addon</td></tr>
-<tr><td><b>/fam delay &lt;seconds&gt;</b></td><td>Adjust the remount delay</td></tr>
-<tr><td><b>/fam silent</b></td><td>Toggle error notifications</td></tr>
-<tr><td><b>/fam debug</b></td><td>Toggle debug mode</td></tr>
-</table>
+## 📝 Commands
 
-<p><b>Tip:</b> Shift+click a mount in your journal to paste its name into chat!</p>
+*   `/fam mount <name>` — Set mount for this character
+*   `/fam account <name>` — Set mount for all characters
+*   `/fam reset` — Reset character mount (use account setting)
+*   `/fam reset account` — Reset account mount (use favourite)
+*   `/fam enable / disable` — Toggle the addon
+*   `/fam delay <seconds>` — Adjust the remount delay
+*   `/fam silent` — Toggle error notifications
+*   `/fam debug` — Toggle debug mode
 
-<h3>FAQ</h3>
-<p><b>I can gather lumber while mounted, will the addon cause issues?</b><br/>
-No! The addon detects if you're already mounted and won't try to remount.</p>
+💡 **Tip:** Shift+click a mount in your journal to paste its name into chat!
 
-<p><b>Why doesn't it work for my Druid?</b><br/>
-Druids are automatically skipped. Travel Form is instant and better than any mount.</p>
+## ❓ FAQ
 
-<p><b>I don't want error messages in chat</b><br/>
-Error notifications are silent by default since v1.1.5. Use <code>/fam silent</code> to toggle them on.</p>
+**I can gather lumber while mounted, will the addon cause issues?**
+No! The addon detects if you're already mounted and won't try to remount.
 
-<h3>Feedback</h3>
-<p>Translations may not be perfect for all languages. If you'd like to help improve them, or if you have any suggestions, please open an issue on <a href="https://github.com/Schlouppy/FarmAutoMount">GitHub</a>.</p>
+**Why doesn't it work for my Druid?**
+Druids are automatically skipped. Travel Form is instant and better than any mount.
+
+**I don't want error messages in chat.**
+Error notifications are silent by default since v1.1.5. Use `/fam silent` to toggle them on.
+
+## 🐛 Issues & Feedback
+
+Translations may not be perfect for all languages. If you'd like to help improve them, or have suggestions, please open an issue on [GitHub](https://github.com/Schlouppy/FarmAutoMount).
