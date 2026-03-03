@@ -29,6 +29,7 @@ local translations = {
         ["Error notifications enabled"] = "Error notifications enabled",
         ["Error notifications disabled"] = "Error notifications disabled",
         ["Help silent"] = "/fam silent - Toggle error notifications",
+        ["Unknown command"] = "Unknown command",
     },
 
     -- French
@@ -57,6 +58,7 @@ local translations = {
         ["Error notifications enabled"] = "Notifications d'erreur activées",
         ["Error notifications disabled"] = "Notifications d'erreur désactivées",
         ["Help silent"] = "/fam silent - Activer/désactiver les notifications d'erreur",
+        ["Unknown command"] = "Commande inconnue",
     },
 
     -- German
@@ -85,6 +87,7 @@ local translations = {
         ["Error notifications enabled"] = "Fehlerbenachrichtigungen aktiviert",
         ["Error notifications disabled"] = "Fehlerbenachrichtigungen deaktiviert",
         ["Help silent"] = "/fam silent - Fehlerbenachrichtigungen umschalten",
+        ["Unknown command"] = "Unbekannter Befehl",
     },
 
     -- Spanish
@@ -113,6 +116,7 @@ local translations = {
         ["Error notifications enabled"] = "Notificaciones de error activadas",
         ["Error notifications disabled"] = "Notificaciones de error desactivadas",
         ["Help silent"] = "/fam silent - Alternar notificaciones de error",
+        ["Unknown command"] = "Comando desconocido",
     },
 
     -- Italian
@@ -141,6 +145,7 @@ local translations = {
         ["Error notifications enabled"] = "Notifiche di errore attivate",
         ["Error notifications disabled"] = "Notifiche di errore disattivate",
         ["Help silent"] = "/fam silent - Attiva/disattiva notifiche di errore",
+        ["Unknown command"] = "Comando sconosciuto",
     },
 
     -- Portuguese (Brazilian)
@@ -169,6 +174,7 @@ local translations = {
         ["Error notifications enabled"] = "Notificações de erro ativadas",
         ["Error notifications disabled"] = "Notificações de erro desativadas",
         ["Help silent"] = "/fam silent - Alternar notificações de erro",
+        ["Unknown command"] = "Comando desconhecido",
     },
 
     -- Russian
@@ -197,6 +203,7 @@ local translations = {
         ["Error notifications enabled"] = "Уведомления об ошибках включены",
         ["Error notifications disabled"] = "Уведомления об ошибках отключены",
         ["Help silent"] = "/fam silent - Переключить уведомления об ошибках",
+        ["Unknown command"] = "Неизвестная команда",
     },
 
     -- Korean
@@ -225,6 +232,7 @@ local translations = {
         ["Error notifications enabled"] = "오류 알림 활성화됨",
         ["Error notifications disabled"] = "오류 알림 비활성화됨",
         ["Help silent"] = "/fam silent - 오류 알림 전환",
+        ["Unknown command"] = "알 수 없는 명령어",
     },
 
     -- Simplified Chinese
@@ -253,6 +261,7 @@ local translations = {
         ["Error notifications enabled"] = "错误通知已启用",
         ["Error notifications disabled"] = "错误通知已禁用",
         ["Help silent"] = "/fam silent - 切换错误通知",
+        ["Unknown command"] = "未知命令",
     },
 
     -- Traditional Chinese
@@ -281,6 +290,7 @@ local translations = {
         ["Error notifications enabled"] = "錯誤通知已啟用",
         ["Error notifications disabled"] = "錯誤通知已停用",
         ["Help silent"] = "/fam silent - 切換錯誤通知",
+        ["Unknown command"] = "未知指令",
     },
 }
 

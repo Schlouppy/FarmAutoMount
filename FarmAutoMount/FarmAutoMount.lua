@@ -270,6 +270,8 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         print("  " .. L["Help silent"])
         print("  /fam debug - Toggle debug mode")
 
+    else
+        print("|cFFFF0000[FAM]|r " .. L["Unknown command"] .. ": " .. command .. ". /fam help")
     end
 
 end
