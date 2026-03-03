@@ -30,6 +30,7 @@ local translations = {
         ["Error notifications disabled"] = "Error notifications disabled",
         ["Help silent"] = "/fam silent - Toggle error notifications",
         ["Unknown command"] = "Unknown command",
+        ["Unknown command hint"] = "Type /fam help for a list of commands.",
     },
 
     -- French
@@ -59,6 +60,7 @@ local translations = {
         ["Error notifications disabled"] = "Notifications d'erreur désactivées",
         ["Help silent"] = "/fam silent - Activer/désactiver les notifications d'erreur",
         ["Unknown command"] = "Commande inconnue",
+        ["Unknown command hint"] = "Tapez /fam help pour voir les commandes.",
     },
 
     -- German
@@ -88,6 +90,7 @@ local translations = {
         ["Error notifications disabled"] = "Fehlerbenachrichtigungen deaktiviert",
         ["Help silent"] = "/fam silent - Fehlerbenachrichtigungen umschalten",
         ["Unknown command"] = "Unbekannter Befehl",
+        ["Unknown command hint"] = "Gib /fam help für eine Liste der Befehle ein.",
     },
 
     -- Spanish
@@ -117,6 +120,7 @@ local translations = {
         ["Error notifications disabled"] = "Notificaciones de error desactivadas",
         ["Help silent"] = "/fam silent - Alternar notificaciones de error",
         ["Unknown command"] = "Comando desconocido",
+        ["Unknown command hint"] = "Escribe /fam help para ver los comandos.",
     },
 
     -- Italian
@@ -146,6 +150,7 @@ local translations = {
         ["Error notifications disabled"] = "Notifiche di errore disattivate",
         ["Help silent"] = "/fam silent - Attiva/disattiva notifiche di errore",
         ["Unknown command"] = "Comando sconosciuto",
+        ["Unknown command hint"] = "Digita /fam help per la lista dei comandi.",
     },
 
     -- Portuguese (Brazilian)
@@ -175,6 +180,7 @@ local translations = {
         ["Error notifications disabled"] = "Notificações de erro desativadas",
         ["Help silent"] = "/fam silent - Alternar notificações de erro",
         ["Unknown command"] = "Comando desconhecido",
+        ["Unknown command hint"] = "Digite /fam help para ver os comandos.",
     },
 
     -- Russian
@@ -204,6 +210,7 @@ local translations = {
         ["Error notifications disabled"] = "Уведомления об ошибках отключены",
         ["Help silent"] = "/fam silent - Переключить уведомления об ошибках",
         ["Unknown command"] = "Неизвестная команда",
+        ["Unknown command hint"] = "Введите /fam help для списка команд.",
     },
 
     -- Korean
@@ -233,6 +240,7 @@ local translations = {
         ["Error notifications disabled"] = "오류 알림 비활성화됨",
         ["Help silent"] = "/fam silent - 오류 알림 전환",
         ["Unknown command"] = "알 수 없는 명령어",
+        ["Unknown command hint"] = "/fam help 를 입력하면 명령어 목록을 볼 수 있습니다.",
     },
 
     -- Simplified Chinese
@@ -262,6 +270,7 @@ local translations = {
         ["Error notifications disabled"] = "错误通知已禁用",
         ["Help silent"] = "/fam silent - 切换错误通知",
         ["Unknown command"] = "未知命令",
+        ["Unknown command hint"] = "输入 /fam help 查看命令列表。",
     },
 
     -- Traditional Chinese
@@ -291,6 +300,7 @@ local translations = {
         ["Error notifications disabled"] = "錯誤通知已停用",
         ["Help silent"] = "/fam silent - 切換錯誤通知",
         ["Unknown command"] = "未知指令",
+        ["Unknown command hint"] = "輸入 /fam help 查看指令列表。",
     },
 }
 
