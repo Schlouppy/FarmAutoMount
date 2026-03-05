@@ -13,7 +13,7 @@ If you can gather without dismounting (e.g. mounted lumber harvesting), the addo
 
 *   🐴 **Auto-remount** — Mounts automatically after looting a gathering node
 *   📦 **Container support** — Also remounts after looting chests, bone piles, and other containers
-*   🪵 **Mounted gathering** — Won't interfere if you can gather without dismounting
+*   🪵 **Mounted gathering** — Won't interfere if you can gather without dismounting (but mobs will still dismount you — and we've got you covered!)
 *   🎯 **Custom mount** — Per-character or account-wide mount setting
 *   ⏱️ **Configurable delay** — Adjust the delay before mounting (default: 0.5s)
 *   🐻 **Druid-friendly** — Automatically skips druids (Travel Form is better!)
