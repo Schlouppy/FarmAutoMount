@@ -9,6 +9,8 @@ Automatically resummons your mount right after gathering any resource — herbs,
 
 If you can gather without dismounting (e.g. mounted lumber harvesting), the addon detects it and stays out of the way.
 
+> ⚠️ Even with mounted gathering, mobs can still knock you off — and chests/containers always require dismounting. So the addon stays useful regardless!
+
 ## ✨ Features
 
 *   🐴 **Auto-remount** — Mounts automatically after looting a gathering node
