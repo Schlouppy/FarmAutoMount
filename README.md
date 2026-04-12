@@ -43,8 +43,10 @@ All commands start with `/fam`:
 
 | Command | Description |
 |---------|-------------|
+| `/fam toggle` | Toggle auto-mount on/off *(useful for macros)* |
 | `/fam enable` | Enable auto-mount |
 | `/fam disable` | Disable auto-mount |
+| `/fam druid` | Toggle druid skipping on/off |
 | `/fam delay <seconds>` | Set delay before mounting |
 | `/fam silent` | Toggle error notifications on/off |
 | `/fam debug` | Toggle debug mode (for troubleshooting) |
@@ -125,6 +127,12 @@ Want to help? Pull requests are welcome!
 ---
 
 ## 📜 Changelog
+
+### v1.1.8
+- 🔀 Added `/fam toggle` — toggle auto-mount on/off (perfect for macros)
+- 🐻 Added `/fam druid` — toggle druid skipping on/off
+- 🔧 Fixed unknown command now shows an error message with hint
+- 📦 Added more container spell IDs (Tools/knowledge points)
 
 ### v1.1.5
 - 🔇 Error notifications now silent by default (`/fam silent` to toggle)

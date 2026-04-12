@@ -28,7 +28,9 @@ If you can gather without dismounting (e.g. mounted lumber harvesting), the addo
 *   `/fam account <name>` — Set mount for all characters
 *   `/fam reset` — Reset character mount (use account setting)
 *   `/fam reset account` — Reset account mount (use favourite)
-*   `/fam enable / disable` — Toggle the addon
+*   `/fam toggle` — Toggle auto-mount on/off *(useful for macros)*
+*   `/fam enable / disable` — Enable or disable the addon
+*   `/fam druid` — Toggle druid skipping on/off
 *   `/fam delay <seconds>` — Adjust the remount delay
 *   `/fam silent` — Toggle error notifications
 *   `/fam debug` — Toggle debug mode
@@ -41,7 +43,7 @@ If you can gather without dismounting (e.g. mounted lumber harvesting), the addo
 No! The addon detects if you're already mounted and won't try to remount.
 
 **Why doesn't it work for my Druid?**
-Druids are automatically skipped. Travel Form is instant and better than any mount.
+Druids are skipped by default — Travel Form is instant and better than any mount. You can toggle this with `/fam druid` if you want druids to remount too.
 
 **I don't want error messages in chat.**
 Error notifications are silent by default since v1.1.5. Use `/fam silent` to toggle them on.
