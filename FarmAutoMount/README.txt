@@ -9,8 +9,10 @@ Commands:
   /fam mount <name>      Set mount for this character
   /fam account <name>    Set mount for all characters
   /fam delay <seconds>   Set delay before mounting (default: 0.5)
+  /fam toggle            Toggle auto-mount on/off (useful for macros)
   /fam enable            Enable auto-mount
   /fam disable           Disable auto-mount
+  /fam druid             Toggle druid skipping on/off
   /fam reset             Reset character mount
   /fam reset account     Reset account mount
   /fam silent            Toggle error notifications
