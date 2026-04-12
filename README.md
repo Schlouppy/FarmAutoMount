@@ -153,7 +153,6 @@ Want to help? Pull requests are welcome!
 
 ## 📄 License
 
-Free to use, modify, and share. No donation required - just happy to share!
 
 ---
 
