@@ -15,6 +15,7 @@ FarmAutoMount_GatheringSpells = {
 
         3365,       -- Opening Miscellaneous chest/lock
         98324,      -- Void-Tainted Remains 
+        6478,       -- Tools (knowledge points)
 
     -- Lumber / Bucheronnage
 
