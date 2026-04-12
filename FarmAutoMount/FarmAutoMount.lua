@@ -49,6 +49,7 @@ local defaults = {
     enabled = true,
     delay = 0.5,
     silent = true,
+    skipdruid = true,
 }
 
 -- Create a frame to listen to game events
@@ -138,7 +139,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 
         -- Skip druids (they use Travel Form)
         local _, class = UnitClass("player")
-        if class == "DRUID" then return end
+        if class == "DRUID" and FarmAutoMountDB.skipdruid then return end
 
         -- Get delay (saved or default)
         local delay = FarmAutoMountDB.delay or defaults.delay
@@ -220,6 +221,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
             print("|cFFFF0000[FAM]|r " .. L["Mount not found"] .. ": " .. cleanName)
         end
     
+    elseif command == "druid" then
+        FarmAutoMountDB.skipdruid = not FarmAutoMountDB.skipdruid
+        print("|cFF00FF00[FAM]|r " .. (FarmAutoMountDB.skipdruid and L["Druid skipping enabled"] or L["Druid skipping disabled"]))
+
     elseif command == "enable" then
         FarmAutoMountDB.enabled = true
         print("|cFF00FF00[FAM]|r " .. L["Enabled"])
@@ -227,6 +232,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
     elseif command == "disable" then
         FarmAutoMountDB.enabled = false
         print("|cFF00FF00[FAM]|r " .. L["Disabled"])
+
+    elseif command == "toggle" then
+        FarmAutoMountDB.enabled = not FarmAutoMountDB.enabled
+        print("|cFF00FF00[FAM]|r " .. (FarmAutoMountDB.enabled and L["Enabled"] or L["Disabled"]))
 
     elseif command == "delay" then
         local seconds = tonumber(arg)
@@ -262,8 +271,10 @@ SlashCmdList["FARMAUTOMOUNT"] = function(msg)
         print("|cFF00FF00[FAM]|r " .. L["Commands"])
         print("  " .. L["Help mount"])
         print("  " .. L["Help mount account"])
+        print("  " .. L["Help toggle"])
         print("  " .. L["Help enable"])
         print("  " .. L["Help disable"])
+        print("  " .. L["Help druid"])
         print("  " .. L["Help delay"])
         print("  " .. L["Help reset"])
         print("  " .. L["Help reset account"])

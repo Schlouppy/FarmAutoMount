@@ -31,6 +31,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Toggle error notifications",
         ["Unknown command"] = "Unknown command",
         ["Unknown command hint"] = "Type /fam help for a list of commands.",
+        ["Help toggle"] = "/fam toggle - Toggle auto-mount on/off (useful for macros)",
+        ["Help druid"] = "/fam druid - Toggle druid skipping on/off",
+        ["Druid skipping enabled"] = "Druid skipping enabled (won't remount druids)",
+        ["Druid skipping disabled"] = "Druid skipping disabled (druids will remount)",
     },
 
     -- French
@@ -61,6 +65,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Activer/désactiver les notifications d'erreur",
         ["Unknown command"] = "Commande inconnue",
         ["Unknown command hint"] = "Tapez /fam help pour voir les commandes.",
+        ["Help toggle"] = "/fam toggle - Activer/désactiver l'addon (utile pour les macros)",
+        ["Help druid"] = "/fam druid - Activer/désactiver le skip des druides",
+        ["Druid skipping enabled"] = "Skip druide activé (les druides ne seront pas remontés)",
+        ["Druid skipping disabled"] = "Skip druide désactivé (les druides seront remontés)",
     },
 
     -- German
@@ -91,6 +99,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Fehlerbenachrichtigungen umschalten",
         ["Unknown command"] = "Unbekannter Befehl",
         ["Unknown command hint"] = "Gib /fam help für eine Liste der Befehle ein.",
+        ["Help toggle"] = "/fam toggle - Auto-Mount ein/ausschalten (nützlich für Makros)",
+        ["Help druid"] = "/fam druid - Druiden-Skip ein/ausschalten",
+        ["Druid skipping enabled"] = "Druiden-Skip aktiviert (Druiden werden nicht aufgesessen)",
+        ["Druid skipping disabled"] = "Druiden-Skip deaktiviert (Druiden werden aufgesessen)",
     },
 
     -- Spanish
@@ -121,6 +133,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Alternar notificaciones de error",
         ["Unknown command"] = "Comando desconocido",
         ["Unknown command hint"] = "Escribe /fam help para ver los comandos.",
+        ["Help toggle"] = "/fam toggle - Activar/desactivar el addon (útil para macros)",
+        ["Help druid"] = "/fam druid - Activar/desactivar omisión de druidas",
+        ["Druid skipping enabled"] = "Omisión de druidas activada (no montará a druidas)",
+        ["Druid skipping disabled"] = "Omisión de druidas desactivada (druidas serán montados)",
     },
 
     -- Italian
@@ -151,6 +167,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Attiva/disattiva notifiche di errore",
         ["Unknown command"] = "Comando sconosciuto",
         ["Unknown command hint"] = "Digita /fam help per la lista dei comandi.",
+        ["Help toggle"] = "/fam toggle - Attiva/disattiva l'addon (utile per le macro)",
+        ["Help druid"] = "/fam druid - Attiva/disattiva il salto dei druidi",
+        ["Druid skipping enabled"] = "Salto druidi attivato (i druidi non verranno rimontati)",
+        ["Druid skipping disabled"] = "Salto druidi disattivato (i druidi verranno rimontati)",
     },
 
     -- Portuguese (Brazilian)
@@ -181,6 +201,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Alternar notificações de erro",
         ["Unknown command"] = "Comando desconhecido",
         ["Unknown command hint"] = "Digite /fam help para ver os comandos.",
+        ["Help toggle"] = "/fam toggle - Ativar/desativar o addon (útil para macros)",
+        ["Help druid"] = "/fam druid - Ativar/desativar o pulo de druidas",
+        ["Druid skipping enabled"] = "Pulo de druidas ativado (druidas não serão remontados)",
+        ["Druid skipping disabled"] = "Pulo de druidas desativado (druidas serão remontados)",
     },
 
     -- Russian
@@ -211,6 +235,10 @@ local translations = {
         ["Help silent"] = "/fam silent - Переключить уведомления об ошибках",
         ["Unknown command"] = "Неизвестная команда",
         ["Unknown command hint"] = "Введите /fam help для списка команд.",
+        ["Help toggle"] = "/fam toggle - Включить/отключить аддон (полезно для макросов)",
+        ["Help druid"] = "/fam druid - Включить/отключить пропуск друидов",
+        ["Druid skipping enabled"] = "Пропуск друидов включён (друиды не будут ремаунтироваться)",
+        ["Druid skipping disabled"] = "Пропуск друидов отключён (друиды будут ремаунтироваться)",
     },
 
     -- Korean
@@ -241,6 +269,10 @@ local translations = {
         ["Help silent"] = "/fam silent - 오류 알림 전환",
         ["Unknown command"] = "알 수 없는 명령어",
         ["Unknown command hint"] = "/fam help 를 입력하면 명령어 목록을 볼 수 있습니다.",
+        ["Help toggle"] = "/fam toggle - 애드온 켜기/끄기 (매크로에 유용)",
+        ["Help druid"] = "/fam druid - 드루이드 건너뛰기 켜기/끄기",
+        ["Druid skipping enabled"] = "드루이드 건너뛰기 활성화됨 (드루이드는 재탑승하지 않음)",
+        ["Druid skipping disabled"] = "드루이드 건너뛰기 비활성화됨 (드루이드도 재탑승함)",
     },
 
     -- Simplified Chinese
@@ -271,6 +303,10 @@ local translations = {
         ["Help silent"] = "/fam silent - 切换错误通知",
         ["Unknown command"] = "未知命令",
         ["Unknown command hint"] = "输入 /fam help 查看命令列表。",
+        ["Help toggle"] = "/fam toggle - 开启/关闭插件（适合宏命令）",
+        ["Help druid"] = "/fam druid - 开启/关闭跳过德鲁伊",
+        ["Druid skipping enabled"] = "已启用跳过德鲁伊（德鲁伊不会重新上坐骑）",
+        ["Druid skipping disabled"] = "已禁用跳过德鲁伊（德鲁伊会重新上坐骑）",
     },
 
     -- Traditional Chinese
@@ -301,6 +337,10 @@ local translations = {
         ["Help silent"] = "/fam silent - 切換錯誤通知",
         ["Unknown command"] = "未知指令",
         ["Unknown command hint"] = "輸入 /fam help 查看指令列表。",
+        ["Help toggle"] = "/fam toggle - 開啟/關閉插件（適合巨集）",
+        ["Help druid"] = "/fam druid - 開啟/關閉跳過德魯伊",
+        ["Druid skipping enabled"] = "已啟用跳過德魯伊（德魯伊不會重新騎乘）",
+        ["Druid skipping disabled"] = "已停用跳過德魯伊（德魯伊會重新騎乘）",
     },
 }
 
